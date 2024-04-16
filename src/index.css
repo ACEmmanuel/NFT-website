@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .parent{
+        @apply relative;
+    }
+
+    .btn{
+        @apply font-bold px-8 py-[.8rem] rounded-full border-4 text-white text-center cursor-pointer text-nowrap;
+    }
+
+    .background{
+        /* background-color: #0e0822; */
+        background-image: radial-gradient(circle at center top, #2c1b7b 0%,  #0e0822 50%);
+        height: 100%;
+    }
+
+
+    .modal{
+        @apply container mx-auto absolute overflow-hidden w-full left-0 top-0 h-[100vh] bg-[#17171f] text-lg grid place-content-center;
+    }
+
+    .underlined{
+        @apply relative;
+    }
+
+    .underlined::before{
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 3px;
+        background-color: rgb(41, 41, 238);
+        border-radius: 3px;
+        bottom: -.5rem;
+    }
+
+    .blurr{
+        background-image: radial-gradient(circle at center center, #2c1b7b 10%, #0e0822 50%);
+    }
+    
+
+    .blur-b{
+        background-image: radial-gradient(circle at center center, #2c1b7b 10%, #0e0822 50%);
+        z-index: -99999;
+        position: absolute;
+        border-radius: 9999px;
+        width: 50rem;
+        height: 50rem;
+        top: 0;
+        left: -6rem;
+        filter: blur(16px);
+    }
+}
+
+
+/* radial-gradient(circle at left top, #0e0822 0%, #2c1b7b 50%) */
