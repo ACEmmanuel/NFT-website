@@ -27,7 +27,7 @@ const Card = () => {
     </div> */}
 
 
-            <div className='grid container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-[5rem] lg:mt-[7rem] overflow-hidden px-5 lg:px-20 gap-y-16 gap-x-8 '>
+            <div className='grid container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-[5rem] lg:mt-[7rem] overflow-hidden px-5 lg:px-20 gap-y-16 gap-x-8 text-[16px] md:text-[18px]'>
         
                     {data.map((e)=>{
                             const {id, name, nft, about, price, img} = e;
