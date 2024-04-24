@@ -9,7 +9,9 @@ const Footer = () => {
         <div className=' container mx-auto mt-12 mb-12 lg:mt-14 lg:mb-14'>
           <div className='flex flex-nowrap justify-between px-10 gap-y-5 items-center'>
             <div className='flex flex-nowrap gap-2 lg:gap-14 items-center '>
-              <p className='text-[1.4rem] font-bold'>NFT</p>
+
+
+              <img src='./nft.png' className='size-[2.7rem] lg:size-[3.5rem]'/>
 
               {/* <span className='hidden lg:flex flex-wrap gap-4 lg:gap-9 text-sm lg:text-[.95rem]'>
                 <a href="">Home</a>

@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <>
         <div className="container mx-auto flex flex-row w-full justify-between items-center text-sm p-6">
-            <p className='text-4xl'>NFT</p>
+            <img src='./nft.png' className='size-[3.5rem] lg:size-[4rem]'/>
 
             <span className='hidden flex-row gap-10 lg:flex text-[1rem]'>
               <a href="">Home</a>
@@ -30,7 +30,7 @@ const Nav = () => {
                                 
               {active && (
                   <div className="modal">
-                      <div><i class='bx bx-x-circle text-[4rem] absolute top-2 right-2' onClick={toggleMenu}></i></div>
+                      <div><i class='bx bx-x-circle text-[4rem] absolute top-2 right-2 z-50' onClick={toggleMenu}></i></div>
                       <br />
                       <div onClick={toggleMenu}><a href="#home">Home</a></div>
                       <br />

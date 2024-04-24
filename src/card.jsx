@@ -4,46 +4,56 @@ import {data} from './data'
 const Card = () => {
               return (
                 <>
-      {/* <div className='flex flex-col items-center w-full max-w-[21rem] mb-8                    '>
-          <div className='flex flex-col items-center bg-blue-900 w-full h-[30rem] rounded-md overflow-hidden'>
-              <div className='bg-gray-900 w-[88%] h-[50%] rounded-md mt-7'></div>
 
-              <div className='text-center mt-8 px-4 text-balance'>
-                  <h2 className='font-bold text-lg'>Crystal Card 1</h2>
-                  <p className='text-sm mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-
-              <p className='text-sm mt-7'>NFT Collection 1</p>
-          </div>
-
-          <div className='mt-8'>
-            <p>$2,500.00 USD</p>
-            <h1 className='font-bold text-lg mt-1'>Crystal Card 1</h1>
-            <p className='text-sm mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            <p className='mt-7 underlined'>View NFT</p>
-          </div>
-
-    </div> */}
-
-
-            <div className='grid container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-[5rem] lg:mt-[7rem] overflow-hidden px-5 lg:px-20 gap-y-16 gap-x-8 text-[16px] md:text-[18px]'>
+            <div className='grid container mx-auto w-full overflow-hidden responsive -z-50'>
         
                     {data.map((e)=>{
-                            const {id, name, nft, about, price, img} = e;
-                            console.log(e);
+                            const {id, name, nft, about, price, img, count, profile, ETH} = e;
                             return(
 
-                              <div className='min-w-[16rem] max-w-[20rem] mb-8 mx-auto' key={id}>
-                                      <div className='flex flex-col items-center bg-blue-900 h-[30rem] rounded-xl overflow-hidden'>
-                                          <div className='bg-gray-900 w-[88%] h-[50%] rounded-xl mt-7 bg-cover bg-no-repeat bg-center aspect-square' style={{backgroundImage : `url(${img})`}}></div>
-                                          <div className='text-center mt-8 px-4 text-balance'>
-                                          <h2 className='font-bold text-lg'>{name}</h2>
-                                          <p className='text-sm mt-2'>{about}</p>
-                                      </div>
+                              <div className='w-[18.5rem] mb-8 mx-auto -z-50' key={id}>
+                                      <div className='flex flex-col items-center bg-gray-500 h-[30rem] border border-white/30 filter backdrop-blur-lg px-[1.3rem]'>
+                                          <div className='bg-gray-900 w-[100%] h-[50%] mt-6 bg-cover bg-no-repeat bg-center aspect-square' style={{backgroundImage : `url(${img})`}}></div>
+                                      <div className='text-left mt-8 text-balance w-full'>
 
-                                    <p className='text-sm mt-6 lg:mt-8'>{nft}</p>
+                                        <div className='straight'>
+
+                                          <h2 className='font-bold text-lg'>{name}</h2>
+                                          
+                                          <div className='flex flex-row items-center gap-2 flex-nowrap'>
+                                            <div>()</div> 
+                                            <div>{count}</div> 
+                                          </div>
+                                        </div>
+
+
+                                          <div className='mt-5 flex flex-row gap-4 items-center'>
+                                            <img src={profile} className='profile'/>
+
+                                            <div className='-space-y-2'>
+                                              <h1 className='font-medium text-[15px]'>Owner</h1>
+                                              <p className='text-[17px]'>@wzard</p>
+                                            </div>
+                                          
+                                          </div>
+
+
+                                      </div>
+                                    <div className='straight mt-9 w-full'>
+                                      <p>Current Bid</p>
+                                      <p className='font-bold'>{ETH}</p>
+                                    </div>
                                   </div>
+
+
+
+
+
+
+
+
+
+
 
                                   <div className='mt-6 text-center md:text-left'>
                                       <p>{price}</p>
